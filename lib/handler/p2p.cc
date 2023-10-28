@@ -9,6 +9,7 @@ namespace cloudlab {
     P2PHandler::P2PHandler(Routing &routing) : routing{routing} {
         auto hash = std::hash<SocketAddress>()(routing.get_backend_address());
         auto path = fmt::format("/tmp/{}-initial", hash);
+
         partitions.insert({0, std::make_unique<KVS>(path)});
     }
 

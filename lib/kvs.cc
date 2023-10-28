@@ -17,7 +17,7 @@ auto KVS::open() -> bool {
 auto KVS::get(const std::string& key, std::string& result) -> bool {
   std::shared_lock<std::shared_timed_mutex> lck(mtx);
   if (!kvs_open) kvs_open = open();
-      return db && db->Get(rocksdb::ReadOptions(), key, &result).ok();
+  return db && db->Get(rocksdb::ReadOptions(), key, &result).ok();
 }
 
 auto KVS::get_all(std::vector<std::pair<std::string, std::string>>& buffer)
