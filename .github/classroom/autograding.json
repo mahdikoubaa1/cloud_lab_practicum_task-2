@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Build",
+      "setup": "",
+      "run": "mkdir build && cd build && cmake ..&& timeout -s9 2m make && cp ctl-test .. && cp router-test .. && cp kvs-test ..",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Test simple KVS",
+      "setup": "",
+      "run": "timeout -s9 5m python3 tests/test_simple_kvs.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2.5
+    },
+    {
+      "name": "Test static sharding",
+      "setup": "",
+      "run": "timeout -s9 2m python3 tests/test_static_sharding.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Test dynamic sharding",
+      "setup": "",
+      "run": "timeout -s9 2m python3 tests/test_dynamic_sharding.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 12.5
+    }
+  ]
+}
