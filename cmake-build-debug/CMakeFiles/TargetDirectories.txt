@@ -1,0 +1,9 @@
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/cloudlab.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/ctl-test.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/router-test.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/kvs-test.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/_deps/fmt-build/CMakeFiles/fmt.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/_deps/fmt-build/CMakeFiles/edit_cache.dir
+/home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug/_deps/fmt-build/CMakeFiles/rebuild_cache.dir

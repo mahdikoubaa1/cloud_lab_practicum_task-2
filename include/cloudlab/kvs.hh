@@ -33,7 +33,7 @@ class KVS {
   auto remove(const std::string& key) -> bool;
 
   auto clear() -> bool;
-
+ ~KVS();
  private:
   std::filesystem::path path;
   rocksdb::DB* db{};

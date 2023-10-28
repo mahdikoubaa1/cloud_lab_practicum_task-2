@@ -56,7 +56,6 @@ def main() -> None:
             ctl = run_ctl("127.0.0.1:40000", "put", f"{k} 2")
             if "OK" not in ctl:
                 run(["kill", "-9", str(router.pid)])
-                run(["kill", "-9", str(kvs1.pid)])
                 run(["kill", "-9", str(kvs2.pid)])
                 sys.exit(1)
 

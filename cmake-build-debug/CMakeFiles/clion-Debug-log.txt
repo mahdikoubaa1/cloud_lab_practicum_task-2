@@ -1,0 +1,15 @@
+/opt/clion-2021.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion-2021.1/bin/ninja/linux/ninja -G Ninja -S /home/mahdi/Documents/task2-mahdikoubaa1 -B /home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug
+-- The CXX compiler identification is GNU 12.1.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Module support is disabled.
+-- Version: 9.0.0
+-- Build type: Debug
+-- CXX_STANDARD: 20
+-- Required features: cxx_variadic_templates
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mahdi/Documents/task2-mahdikoubaa1/cmake-build-debug

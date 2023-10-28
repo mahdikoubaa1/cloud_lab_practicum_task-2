@@ -9,11 +9,15 @@ auto KVS::open() -> bool {
   options.create_if_missing = true;
   return rocksdb::DB::Open(options, path.string(), &db).ok();
 }
+ KVS::~KVS( ) {
+     std::shared_lock<std::shared_timed_mutex> lck(mtx);
+     if (db!= nullptr) db->Close();
+}
 
 auto KVS::get(const std::string& key, std::string& result) -> bool {
   std::shared_lock<std::shared_timed_mutex> lck(mtx);
   if (!kvs_open) kvs_open = open();
-  return db && db->Get(rocksdb::ReadOptions(), key, &result).ok();
+      return db && db->Get(rocksdb::ReadOptions(), key, &result).ok();
 }
 
 auto KVS::get_all(std::vector<std::pair<std::string, std::string>>& buffer)
@@ -28,7 +32,6 @@ auto KVS::get_all(std::vector<std::pair<std::string, std::string>>& buffer)
     buffer.emplace_back(it->key().data(), it->value().data());
     it->Next();
   }
-
   return true;
 }
 
@@ -46,6 +49,7 @@ auto KVS::remove(const std::string& key) -> bool {
 
 auto KVS::clear() -> bool {
   std::lock_guard<std::shared_timed_mutex> lck(mtx);
+  if (db!=nullptr) db->Close();
   return rocksdb::DestroyDB(path.string(), {}).ok();
 }
 
